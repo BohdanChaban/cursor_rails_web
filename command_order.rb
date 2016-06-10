@@ -33,4 +33,4 @@ Cart.find(2).update(account_id: Account.find(2).id)
 
 Account.find(2).cart.products
 
-Account.find(2).cart.products.sum("price")
+Account.find(2).cart.products.sum(:price)
