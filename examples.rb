@@ -17,4 +17,4 @@ Product.find(5).update(cart_id: Cart.find(2).id)   #Add some products to cart
 
 Cart.find(2).update(account_id: Account.find(2).id)   #Get all products in cart for some account
 
-Account.find(2).cart.products.sum("price")    #Get total sum of products in cart for account
+Account.find(2).cart.products.sum(:price)    #Get total sum of products in cart for account
