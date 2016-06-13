@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>RailsChaban</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>RailsChaban</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    "application.css" %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header class="header">
+      <h1>CURSOR SHOP</h1>
+    </header>
 
-<%= yield %>
-
-</body>
+    <main>
+      <%= yield %>
+    </main>
+    <footer class="footer">
+      <span>All rights reserved &copy; 2016</span>
+    </footer>
+  </body>
 </html>
