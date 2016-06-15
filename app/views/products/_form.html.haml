@@ -1,0 +1,15 @@
+= form_for(@product) do |f|
+  .field.input_block
+    = f.label :name
+    %br
+    = f.text_field :name
+  .field.input_block
+    = f.label :description
+    %br
+    = f.text_field :description
+  .field.input_block
+    = f.label :price
+    %br
+    = f.text_field :price
+  .actions.input_block
+    = f.submit

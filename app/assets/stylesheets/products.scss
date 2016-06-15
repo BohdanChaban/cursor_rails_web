@@ -1,19 +1,32 @@
 // Place all the styles related to the products controller here.
-// They will automatically be included in application.css.
+// They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .all_file {
   position: relative;
-  min-height: 450px;
+  min-height: 460px;
 }
 
-.links {
+.links, .show_text, table {
   font-size: 16px;
 }
 
-table {
-  font-size: 16px;
-}
 table td {
   font-size: 14px;
   padding: 2px;
+}
+
+h1, .links_inline {
+  display: inline-block;
+}
+
+h1 {
+  padding-left: 10px;
+}
+
+.links.cart_pic {
+  float: right;
+}
+
+.input_block {
+  margin: 15px;
 }

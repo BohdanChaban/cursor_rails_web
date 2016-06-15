@@ -1,0 +1,28 @@
+.all_file
+  - flash.each do |key, value|
+    .alert{role: "alert", class: colored_class(key)}= value
+  %h1= 'Products list'
+  .links.cart_pic
+    = link_to image_tag('cart_pic.png', size: "60x60"), cart_path
+
+  %br
+
+  %table.table.table-hover
+    %thead
+      %tr
+        %th Name
+        %th Description
+        %th Price
+        %th(colspan="4")
+    %tbody
+      - @products.each do |product|
+        %tr
+          %td= product.name
+          %td= product.description
+          %td= product.price
+          %td= button_to 'add to cart', add_to_cart_path(product_id: product.id), remote: true
+          %td= link_to 'Show', product
+          %td= link_to 'Edit', edit_product_path(product)
+          %td= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }
+  .links
+    = button_to 'Create new product', new_product_path
