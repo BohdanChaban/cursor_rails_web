@@ -17,5 +17,5 @@
 /tmp
 
 # Personal-added ignore files
-/.idea
+.idea/
 command_order.rb
