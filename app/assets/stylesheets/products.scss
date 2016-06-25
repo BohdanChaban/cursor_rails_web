@@ -2,25 +2,15 @@
 // They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .all_file {
-  position: relative;
   min-height: 460px;
 }
 
-.links, .show_text, table {
-  font-size: 16px;
-}
-
-table td {
-  font-size: 14px;
-  padding: 2px;
-}
-
-h1, .links_inline {
+.links_inline {
   display: inline-block;
 }
 
-h1 {
-  padding-left: 10px;
+.header1 {
+  display: inline-block;
 }
 
 .links.cart_pic {

@@ -1,13 +1,13 @@
 .all_file
   - flash.each do |key, value|
     .alert{role: "alert", class: colored_class(key)}= value
-  %h1= 'Products list'
+  %h1.header1= 'Products list'
   .links.cart_pic
     = link_to image_tag('cart_pic.png', size: "60x60"), cart_path
 
   %br
 
-  %table.table.table-hover
+  %table.table.table-hover.my_table
     %thead
       %tr
         %th Name

@@ -17,7 +17,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body {
+.all_file {
+  position: relative;
+}
+
+.body {
     color: #454545;
 }
 
@@ -28,7 +32,7 @@ body {
     padding: 15px;
 }
 
-main {
+.main {
     background-color: #DCEDC8;
     padding: 15px;
 }
@@ -41,3 +45,17 @@ main {
     font-size: 16px;
     text-align: right;
 }
+
+.my_table {
+  font-size: 16px;
+}
+
+.header1 {
+  padding-left: 10px;
+}
+
+.links, .show_text {
+  font-size: 16px;
+}
+
+

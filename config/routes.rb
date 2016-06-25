@@ -3,8 +3,6 @@ Rails.application.routes.draw do
 
   resource :cart, only: :show
 
-  get 'cart', to: 'cart#show'
-
   post '/carts/add_product', to: 'carts#add', as: 'add_to_cart'
 
   resources :accounts

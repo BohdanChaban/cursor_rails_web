@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
-  before_action :initialize_session, before: :index
+  before_action :initialize_session, only: :index
+  before_action :find_product, only: [:show, :edit, :update, :destroy]
 
   def index
     @products = Product.all
@@ -11,11 +12,9 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    @product = Product.find(params[:id])
   end
 
   def update
-    @product = Product.find(params[:id])
     if @product.update(product_params)
       redirect_to products_path
     else
@@ -35,11 +34,9 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:id])
   end
 
   def destroy
-    @product = Product.find(params[:id])
     @product.destroy
     flash[:destroy] = "Product was successfully destroyed."
     redirect_to products_path #, notice: 'Product was successfully destroyed.'
@@ -53,5 +50,9 @@ class ProductsController < ApplicationController
 
   def initialize_session
     session[:view_count] ||= 0
+  end
+
+  def find_product
+    @product = Product.find(params[:id])
   end
 end
