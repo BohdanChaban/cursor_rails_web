@@ -1,0 +1,16 @@
+!!! 5
+%html
+  %head
+    %title RailsChaban
+    = stylesheet_link_tag 'application', :media => 'all'
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+
+  %body.body
+    %header.header
+      %h1 CURSOR SHOP
+    %main.main
+      = yield
+    %footer.footer
+      %span All rights reserved &copy; 2016

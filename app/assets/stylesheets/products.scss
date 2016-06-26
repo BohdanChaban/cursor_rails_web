@@ -13,10 +13,23 @@
   display: inline-block;
 }
 
-.links.cart_pic {
-  float: right;
+.header_new {
+  margin-left: 200px;
 }
 
-.input_block {
+.cart_pic {
+  float: right;
+  margin-right: 100px;
+}
+
+.field, .actions {
   margin: 15px;
+}
+
+.image_empty {
+  margin-left: 470px;
+}
+
+.submit_button {
+  margin-left: 34%;
 }
