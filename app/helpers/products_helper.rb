@@ -4,8 +4,7 @@ module ProductsHelper
     'alert-danger' if key.to_sym == :destroy
   end
 
-  def products_list_partial_name(products)
-    return 'empty' if products == 0
-    'list' if products > 0
+  def products_list_partial_name
+    @products.empty? ? 'empty' : 'list'
   end
 end
