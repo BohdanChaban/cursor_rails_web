@@ -40,6 +40,16 @@ gem 'bootstrap-sass'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'shoulda-matchers'
+  gem 'faker'
+  gem 'factory_girl_rails'
+  gem 'simplecov', :require => false
 end
 
 group :development do
