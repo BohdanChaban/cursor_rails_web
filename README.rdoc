@@ -1,5 +1,5 @@
 
-[![Coverage Status](https://coveralls.io/repos/github/BohdanChaban/cursor_rails_web/badge.svg?branch=master)](https://coveralls.io/github/BohdanChaban/cursor_rails_web?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/BohdanChaban/cursor_rails_web/badge.png?branch=master)](https://coveralls.io/github/BohdanChaban/cursor_rails_web?branch=master)
 
 == README
 
