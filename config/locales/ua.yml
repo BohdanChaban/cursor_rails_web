@@ -1,5 +1,7 @@
 ua:
   hello: "Привіт, світе"
+  flash_create: 'Продукт успішно створений'
+  flash_destroy: 'Продукт успішно видалений'
   activerecord:
     models:
       account: 'Користувач'
@@ -18,7 +20,7 @@ ua:
         create_account: 'Створити користувача'
         editing_account: 'Редагування користувача'
       product:
-        name: 'Ім’я'
+        name: 'Назва'
         description: 'Опис'
         price: 'Вартість'
         empty: 'Список продуктів пустий'
