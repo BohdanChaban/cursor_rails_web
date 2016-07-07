@@ -1,4 +1,4 @@
-%h1.header1= 'Products list is empty'
+%h1.header1= Product.human_attribute_name('empty')
 
 .links.image_empty
   = link_to image_tag('new.png', size: "300x300"), new_product_path

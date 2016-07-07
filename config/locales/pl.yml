@@ -1,0 +1,34 @@
+pl:
+  hello: "Witaj świecie"
+  activerecord:
+    models:
+      account: 'Użytkownik'
+      product: 'Produkt'
+      cart: 'Koszyk'
+    attributes:
+      account:
+        name: 'Nazwisko'
+        age: 'Wiek'
+        listing_accounts: 'Lista użytkowników'
+        new_account: 'Nowy użytkownik'
+        show: 'Przegląd'
+        edit: 'Edytować'
+        destroy: 'Usunąć'
+        back: 'Do tyłu'
+        create_account: 'Tworzenie użytkownika'
+        editing_account: 'Edycja użytkownika'
+      product:
+        name: 'Nazwa'
+        description: 'Opis'
+        price: 'Cena'
+        empty: 'Lista produktów jest pusta'
+        products_list: 'Lista produktów'
+        show: 'Przegląd'
+        edit: 'Edytować'
+        destroy: 'Usunąć'
+        back: 'Do tyłu'
+        create_product: 'Utwórz produkt'
+        add_to_cart: 'Włożyć do koszyka'
+        new_product: 'Nowy produkt'
+        edit_product: 'Edycja produktu'
+        update_product: 'Aktualizacja produktu'

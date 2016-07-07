@@ -1,7 +1,7 @@
 !!! 5
 %html
   %head
-    %title RailsChaban
+    %title Rails_Chaban
     = stylesheet_link_tag 'application', :media => 'all'
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
@@ -10,6 +10,10 @@
   %body.body
     %header.header
       %h1 CURSOR SHOP
+      .lang_link
+        = link_to image_tag('en.png', size: "50x50"), '?locale=en'
+        = link_to image_tag('ua.png', size: "50x50"), '?locale=ua'
+        = link_to image_tag('pl.png', size: "50x50"), '?locale=pl'
     %main.main
       = yield
     %footer.footer

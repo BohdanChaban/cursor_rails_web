@@ -30,6 +30,15 @@
     background-color: #8BC34A;
     height: 110px;
     padding: 15px;
+  h1 {
+    display: inline-block;
+  }
+}
+
+.lang_link {
+  display: inline-block;
+  float: right;
+  margin-top: 15px;
 }
 
 .main {

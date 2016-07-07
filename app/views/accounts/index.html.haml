@@ -2,22 +2,22 @@
   %p{ :id => 'notice'}
     = notice
 
-  %h1 Listing Accounts
+  %h1= Account.human_attribute_name('listing_accounts')
 
   %table.table.table-hover.my_table
     %thead
       %tr
-        %th Name
-        %th Age
+        %th= Account.human_attribute_name('name')
+        %th= Account.human_attribute_name('age')
         %th{ :colspan =>'3'}
     %tbody
       - @accounts.each do |account|
         %tr
           %td= account.name
           %td= account.age
-          %td= link_to 'Show', account
-          %td= link_to 'Edit', edit_account_path(account)
-          %td= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' }
+          %td= link_to Account.human_attribute_name('show'), account
+          %td= link_to Account.human_attribute_name('edit'), edit_account_path(account)
+          %td= link_to Account.human_attribute_name('destroy'), account, method: :delete, data: { confirm: 'Are you sure?' }
   %br/
   .links
-    = link_to 'New Account', new_account_path
+    = link_to Account.human_attribute_name('new_account'), new_account_path

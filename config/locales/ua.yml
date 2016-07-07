@@ -1,0 +1,59 @@
+ua:
+  hello: "Привіт, світе"
+  activerecord:
+    models:
+      account: 'Користувач'
+      product: 'Продукт'
+      cart: 'Кошик'
+    attributes:
+      account:
+        name: 'Ім’я'
+        age: 'Вік'
+        listing_accounts: 'Список користувачів'
+        new_account: 'Новий користувач'
+        show: 'Переглянути'
+        edit: 'Редагувати'
+        destroy: 'Видалити'
+        back: 'Назад'
+        create_account: 'Створити користувача'
+        editing_account: 'Редагування користувача'
+      product:
+        name: 'Ім’я'
+        description: 'Опис'
+        price: 'Вартість'
+        empty: 'Список продуктів пустий'
+        products_list: 'Список продуктів'
+        show: 'Переглянути'
+        edit: 'Редагувати'
+        destroy: 'Видалити'
+        back: 'Назад'
+        create_product: 'Створити продукт'
+        add_to_cart: 'Додати до кошика'
+        new_product: 'Новий продукт'
+        edit_product: 'Редагування продукту'
+        update_product: 'Оновити продукт'
+    errors:
+      template:
+        header:
+          one: "1 помилка присутня в %{model}"
+          other: "%{count} помилок у %{model}"
+        body: "У вас виникли такі помилки"
+      models:
+        account:
+          attributes:
+            name:
+              blank: 'не може бути пустим'
+              too_short: 'має бути не менше %{count} символів'
+              invalid: 'повинно містити літери'
+            age:
+              blank: 'не може бути пустим'
+              not_a_number: 'має бути числом'
+              greater_than_or_equal_to: 'має бути більшим або рівним %{count}'
+              less_than_or_equal_to: 'має бути меншим або рівним %{count}'
+        product:
+          attributes:
+            name:
+              blank: 'не може бути пустим'
+            price:
+              not_a_number: 'має бути числом'
+              greater_than: 'має бути більшою за 0'

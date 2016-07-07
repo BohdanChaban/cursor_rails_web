@@ -2,11 +2,11 @@
   = notice
 
 %p
-  %strong Name:
+  %strong= Account.human_attribute_name('name')
   = @account.name
 %p
-  %strong Age:
+  %strong= Account.human_attribute_name('age')
   = @account.age
 
-= link_to 'Edit', edit_account_path(@account)
-= link_to 'Back', accounts_path
+= link_to Account.human_attribute_name('edit'), edit_account_path(@account)
+= link_to Account.human_attribute_name('back'), accounts_path

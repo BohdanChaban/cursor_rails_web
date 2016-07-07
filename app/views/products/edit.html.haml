@@ -1,17 +1,17 @@
 .all_file
-  %h1.header1 Edit menu
+  %h1.header1= Product.human_attribute_name('edit_product')
   = form_for(@product) do |f|
     .input_block
-      = f.label :name
+      = f.label Product.human_attribute_name('name')
       %br
       = f.text_field :name
     .input_block
-      = f.label :description
+      = f.label Product.human_attribute_name('description')
       %br
       = f.text_field :description
     .input_block
-      = f.label :price
+      = f.label Product.human_attribute_name('price')
       %br
       = f.text_field :price
     .input_block
-      = f.submit
+      = f.submit Product.human_attribute_name('update_product')

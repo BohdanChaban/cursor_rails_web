@@ -39,7 +39,7 @@ class ProductsController < ApplicationController
   def destroy
     @product.destroy
     flash[:destroy] = "Product was successfully destroyed."
-    redirect_to products_path #, notice: 'Product was successfully destroyed.'
+    redirect_to products_path
   end
 
   private

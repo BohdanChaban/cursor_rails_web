@@ -21,3 +21,35 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    models:
+      account: 'Account'
+      product: 'Product'
+      cart: 'Cart'
+    attributes:
+      account:
+        name: 'Name'
+        age: 'Age'
+        listing_accounts: 'Listing accounts'
+        new_account: 'New account'
+        show: 'Show'
+        edit: 'Edit'
+        destroy: 'Destroy'
+        back: 'Back'
+        create_account: 'Create account'
+        editing_account: 'Editing account'
+      product:
+        name: 'Name'
+        description: 'Description'
+        price: 'Price'
+        empty: 'Products list is empty'
+        products_list: 'Products list'
+        show: 'Show'
+        edit: 'Edit'
+        destroy: 'Destroy'
+        back: 'Back'
+        create_product: 'Create product'
+        add_to_cart: 'Add to cart'
+        new_product: 'New product'
+        edit_product: 'Edit product'
+        update_product: 'Update product'

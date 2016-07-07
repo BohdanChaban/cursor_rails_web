@@ -1,18 +1,18 @@
 .all_file
   %p.show_text
-    %strong Name:
+    %strong= Product.human_attribute_name('name')
     = @product.name
   %p.show_text
-    %strong Description:
+    %strong= Product.human_attribute_name('description')
     = @product.description
   %p.show_text
-    %strong Price:
+    %strong= Product.human_attribute_name('price')
     = @product.price
   .links.links_inline
-    = link_to 'Edit', edit_product_path(@product)
+    = link_to Product.human_attribute_name('edit'), edit_product_path(@product)
   |
   .links.links_inline
-    = link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' }
+    = link_to Product.human_attribute_name('destroy'), @product, method: :delete, data: { confirm: 'Are you sure?' }
   |
   .links.links_inline
-    = link_to 'Back', products_path
+    = link_to Product.human_attribute_name('back'), products_path

@@ -1,20 +1,25 @@
 .input_block
   = form_for @product, :html => {:class => "form-horizontal center"} do |f|
+    - if @product.errors.any?
+      #error_explanation
+        %h2
+          = pluralize(@product.errors.count, "error")
+          "prohibited this product from being saved:"
+        %ul
+          =@product.errors.full_messages.each do |message|
+            %li= message
+
     .form-group
-      = f.label :name, "Name:", class: "col-md-4 control-label"
+      = f.label :name, Product.human_attribute_name('name'), class: "col-md-4 control-label"
       .col-md-8
         = f.text_field :name, class: "form-control"
     .form-group
-      = f.label :description, "Description:", class: "col-md-4 control-label"
+      = f.label :description, Product.human_attribute_name('description'), class: "col-md-4 control-label"
       .col-md-8
         = f.text_field :description, class: "form-control"
     .form-group
-      = f.label :price, "Price:", class: "col-md-4 control-label"
+      = f.label :price, Product.human_attribute_name('price'), class: "col-md-4 control-label"
       .col-md-8
         = f.text_field :price, class: "form-control"
     .submit_button
-      = f.submit "Create product", class: "btn btn-default btn-success"
-
--#.progress
--#  %div{:class => "progress-bar progress-bar-success progress-bar-striped", :role=>"progressbar", 'aria-valuenow'=>30, 'aria-valuemin'=>0, 'aria-valuemax'=>100, :style=>"width: 80%"}
--#    %span.sr-only 40% Complete (success)
+      = f.submit Product.human_attribute_name('create_product'), class: "btn btn-default btn-success"

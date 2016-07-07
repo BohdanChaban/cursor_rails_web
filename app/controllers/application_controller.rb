@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :set_current_card
+  before_action :set_locale
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -9,5 +10,9 @@ class ApplicationController < ActionController::Base
 
   def set_current_card
     session[:cart_id]||= Cart.create.id
+  end
+
+  def set_locale
+    I18n.locale = params[:locale] if params[:locale].present?
   end
 end
