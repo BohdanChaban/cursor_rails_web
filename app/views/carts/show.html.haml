@@ -1,11 +1,11 @@
 .all_file
-  %h1.header1 Your cart
+  %h1.header1= Cart.human_attribute_name('your_cart')
   %table.table.table-hover.my_table
     %thead
       %tr
-        %th Name
-        %th Description
-        %th Price
+        %th= Cart.human_attribute_name('name')
+        %th= Cart.human_attribute_name('description')
+        %th= Cart.human_attribute_name('price')
     %tbody
       - @products_in_cart.each do |product|
         %tr
@@ -14,4 +14,4 @@
           %td= product.price
   %br
   .links
-    = link_to 'Go to products list', products_path
+    = link_to Cart.human_attribute_name('products_list'), products_path

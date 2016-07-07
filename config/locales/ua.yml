@@ -1,5 +1,6 @@
 ua:
   hello: "Привіт, світе"
+  rights: 'Всі права захищені'
   flash_create: 'Продукт успішно створений'
   flash_destroy: 'Продукт успішно видалений'
   activerecord:
@@ -34,11 +35,17 @@ ua:
         new_product: 'Новий продукт'
         edit_product: 'Редагування продукту'
         update_product: 'Оновити продукт'
+      cart:
+        name: 'Назва'
+        description: 'Опис'
+        price: 'Вартість'
+        products_list: 'Список продуктів'
+        your_cart: 'Ваш кошик'
     errors:
       template:
         header:
           one: "1 помилка присутня в %{model}"
-          other: "%{count} помилок у %{model}"
+          other: "%{count} помилки у %{model}"
         body: "У вас виникли такі помилки"
       models:
         account:
@@ -58,4 +65,4 @@ ua:
               blank: 'не може бути пустим'
             price:
               not_a_number: 'має бути числом'
-              greater_than: 'має бути більшою за 0'
+              greater_than: 'має бути більшою за %{count}'

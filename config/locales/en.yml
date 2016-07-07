@@ -21,6 +21,7 @@
 
 en:
   hello: "Hello world"
+  rights: 'All rights reserved'
   flash_create: 'Product was successfully created.'
   flash_destroy: 'Product was successfully destroyed.'
   activerecord:
@@ -55,3 +56,9 @@ en:
         new_product: 'New product'
         edit_product: 'Edit product'
         update_product: 'Update product'
+      cart:
+        name: 'Name'
+        description: 'Description'
+        price: 'Price'
+        your_cart: 'Your cart'
+        products_list: 'Products list'

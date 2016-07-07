@@ -1,7 +1,8 @@
 pl:
   hello: "Witaj świecie"
-  flash_create: '' #Product was successfully created.
-  flash_destroy: '' #Product was successfully destroyed.
+  rights: 'Wszelkie prawa zastrzeżone'
+  flash_create: 'Produkt został pomyślnie utworzony.'
+  flash_destroy: 'Produkt został pomyślnie zniszczone.'
   activerecord:
     models:
       account: 'Użytkownik'
@@ -34,3 +35,34 @@ pl:
         new_product: 'Nowy produkt'
         edit_product: 'Edycja produktu'
         update_product: 'Aktualizacja produktu'
+      cart:
+        name: 'Nazwa'
+        description: 'Opis'
+        price: 'Cena'
+        your_cart: 'Twój koszyk'
+        products_list: 'Lista produktów'
+    errors:
+      template:
+        header:
+          one: "1 błąd występuje w %{model}"
+          other: "Istnieją %{count} błędy w %{model}"
+        body: "Masz następującego błędu"
+      models:
+        account:
+          attributes:
+            name:
+              blank: 'nie może być pusty'
+              too_short: 'musi wynosić co najmniej %{count} znaków'
+              invalid: 'musi zawierać litery'
+            age:
+              blank: 'nie może być pusty'
+              not_a_number: 'musi być liczbą'
+              greater_than_or_equal_to: 'musi być większa lub równa %{count}'
+              less_than_or_equal_to: 'musi być mniejsza lub równa %{count}'
+        product:
+          attributes:
+            name:
+              blank: 'nie może być pusty'
+            price:
+              not_a_number: 'musi być liczbą'
+              greater_than: 'musi być większa %{count}'
