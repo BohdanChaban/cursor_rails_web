@@ -13,8 +13,9 @@ class ApplicationController < ActionController::Base
   end
 
   def set_locale
-    session[:locale] = params[:locale]
-    I18n.locale = session[:locale] if params[:locale].present?
+    I18n.locale = params[:locale]
+    # session[:locale] = params[:locale]
+    # I18n.locale = session[:locale] if params[:locale].present?
     # I18n.locale = params[:locale] || I18n.default_locale
     # I18n.locale = params[:locale] if params[:locale].present?
   end
