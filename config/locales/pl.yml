@@ -41,6 +41,7 @@ pl:
         price: 'Cena'
         your_cart: 'Twój koszyk'
         products_list: 'Lista produktów'
+        order: 'Zamówienie'
     errors:
       template:
         header:

@@ -9,10 +9,8 @@
     %strong= Product.human_attribute_name('price')
     = @product.price
   .links.links_inline
-    = link_to Product.human_attribute_name('edit'), edit_product_path(@product)
-  |
+    = button_to Product.human_attribute_name('edit'), edit_product_path(@product), method: :get, class: "btn btn-default btn-success"
   .links.links_inline
-    = link_to Product.human_attribute_name('destroy'), @product, method: :delete, data: { confirm: 'Are you sure?' }
-  |
+    = button_to Product.human_attribute_name('destroy'), @product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default btn-success"
   .links.links_inline
-    = link_to Product.human_attribute_name('back'), products_path
+    = button_to Product.human_attribute_name('back'), products_path, method: :get, class: "btn btn-default btn-success"

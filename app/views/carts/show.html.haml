@@ -13,5 +13,8 @@
           %td= product.description
           %td= product.price
   %br
-  .links
-    = link_to Cart.human_attribute_name('products_list'), products_path
+  .links_inline
+    = button_to Cart.human_attribute_name('products_list'), products_path, method: :get, class: 'btn btn-default btn-success'
+  .links_inline.button_right
+    = button_to Cart.human_attribute_name('order'), order_cart_path, method: :get, class: 'btn btn-default btn-success'
+

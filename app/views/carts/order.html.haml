@@ -1,0 +1,7 @@
+.all_file
+  %h1= Cart.human_attribute_name('order')
+
+  %p Total price of products in your cart:
+  = @total_price_of_order
+
+  = button_to 'Cart', cart_path, method: :get, class: "btn btn-default btn-success"

@@ -41,6 +41,7 @@ ua:
         price: 'Вартість'
         products_list: 'Список продуктів'
         your_cart: 'Ваш кошик'
+        order: 'Замовлення'
     errors:
       template:
         header:

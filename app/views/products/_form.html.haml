@@ -4,11 +4,6 @@
       #error_explanation
         %h2
           = error_messages_for(@product)
-        -#  = pluralize(@product.errors.count, "error")
-        -#  "prohibited this product from being saved:"
-        -#%ul
-        -#  =@product.errors.full_messages.each do |message|
-        -#    %li= message
 
     .form-group
       = f.label :name, Product.human_attribute_name('name'), class: "col-md-4 control-label"

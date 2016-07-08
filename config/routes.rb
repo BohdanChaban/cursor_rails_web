@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
   resources :products
 
-  resource :cart, only: :show
-
-  post '/carts/add_product', to: 'carts#add', as: 'add_to_cart'
+  resource :cart, only: :show do
+    collection do
+          get 'order'
+    end
+  end
+  post '/cart/add_product', to: 'cart#add', as: 'add_to_cart'
 
   resources :accounts
   # The priority is based upon order of creation: first created -> highest priority.
