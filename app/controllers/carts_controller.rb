@@ -9,7 +9,7 @@ class CartsController < ApplicationController
   end
 
   def remove
-    Cart.find(session[:cart_id]).products.find(params[:product_id]).destroy
+    Cart.find(session[:cart_id]).products.find(params[:product_id]).update(cart_id: nil)
     redirect_to cart_path
   end
 
@@ -18,15 +18,18 @@ class CartsController < ApplicationController
   end
 
   def send_mail
-    price = @total_price_of_order
+    order_price = total_price_of_order
     email = params[:email]
-    OrderMailer.order_email(email, price).deliver
+    OrderMailer.order_email(email, order_price).deliver
+    Cart.find(session[:cart_id]).products.each do |p|
+      p.update(cart_id: nil)
+    end
     redirect_to products_path
   end
 
   private
 
   def total_price_of_order
-    Cart.find(session[:cart_id]).products.sum("price")
+    Cart.find(session[:cart_id]).products.sum('price')
   end
 end
