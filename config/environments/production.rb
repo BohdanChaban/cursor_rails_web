@@ -68,6 +68,7 @@ Rails.application.configure do
       api_key: 'key-b1d2b24508b66422df581b9ef466cc44',
       domain: 'sandbox8767be5b27634401803d19e49f902310.mailgun.org'
   }
+  config.action_mailer.perform_deliveries = true
 
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
