@@ -24,6 +24,7 @@ en:
   rights: 'All rights reserved'
   flash_create: 'Product was successfully created.'
   flash_destroy: 'Product was successfully destroyed.'
+  sure: 'Are you sure?'
   activerecord:
     models:
       account: 'Account'

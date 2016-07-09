@@ -3,6 +3,7 @@ pl:
   rights: 'Wszelkie prawa zastrzeżone'
   flash_create: 'Produkt został pomyślnie utworzony.'
   flash_destroy: 'Produkt został pomyślnie zniszczone.'
+  sure: 'Czy jesteś pewien?'
   activerecord:
     models:
       account: 'Użytkownik'

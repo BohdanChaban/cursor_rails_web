@@ -3,6 +3,7 @@ ua:
   rights: 'Всі права захищені'
   flash_create: 'Продукт успішно створений'
   flash_destroy: 'Продукт успішно видалений'
+  sure: 'Ви впевнені?'
   activerecord:
     models:
       account: 'Користувач'
