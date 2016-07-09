@@ -22,9 +22,9 @@ class CartsController < ApplicationController
     email = params[:email]
     OrderMailer.order_email(email, order_price).deliver
     redirect_to products_path
-    # Cart.find(session[:cart_id]).products.each do |p|
-    #   p.update(cart_id: nil)
-    # end
+    Cart.find(session[:cart_id]).products.each do |p|
+      p.update(cart_id: nil)
+    end
   end
 
   private
