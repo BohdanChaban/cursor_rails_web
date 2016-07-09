@@ -63,3 +63,7 @@ en:
         your_cart: 'Your cart'
         products_list: 'Products list'
         order: 'Order'
+        confirm_order: 'Confirm order'
+        back_to_cart: 'Back to cart'
+        total_price: 'Total price of products in your cart:'
+        your_email: 'Your email address'

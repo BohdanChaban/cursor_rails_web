@@ -42,6 +42,10 @@ ua:
         products_list: 'Список продуктів'
         your_cart: 'Ваш кошик'
         order: 'Замовлення'
+        confirm_order: 'Підтвердити замовлення'
+        back_to_cart: 'Назад до кошика'
+        total_price: 'Загальна вартість продуктів у Вашому кошику:'
+        your_email: 'Ваша email адреса'
     errors:
       template:
         header:

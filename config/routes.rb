@@ -6,7 +6,9 @@ Rails.application.routes.draw do
           get 'order'
     end
   end
+
   post '/cart/add_product', to: 'cart#add', as: 'add_to_cart'
+  match '/send_mail', to: 'carts#send_mail', via: 'post'
 
   resources :accounts
   # The priority is based upon order of creation: first created -> highest priority.

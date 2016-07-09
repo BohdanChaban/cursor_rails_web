@@ -13,3 +13,21 @@
   float: right;
   margin-right: 150px;
 }
+
+.order_price, .order_text {
+  font-size: 18px;
+  display: inline-block;
+  margin: 30px;
+}
+
+.order_price {
+  font-weight: bold;
+}
+
+.order_text p {
+  font-size: 18px;
+}
+
+.order_button {
+  margin-top: 50px;
+}

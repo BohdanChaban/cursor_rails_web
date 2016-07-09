@@ -42,6 +42,10 @@ pl:
         your_cart: 'Twój koszyk'
         products_list: 'Lista produktów'
         order: 'Zamówienie'
+        confirm_order: 'Potwierdź zamówienie'
+        back_to_cart: 'Powrót do koszyka'
+        total_price: 'Całkowity koszt produktów w koszyku:'
+        your_email: 'Twój adres email'
     errors:
       template:
         header:

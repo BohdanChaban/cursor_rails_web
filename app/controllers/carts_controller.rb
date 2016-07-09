@@ -12,6 +12,13 @@ class CartsController < ApplicationController
     @total_price_of_order = total_price_of_order
   end
 
+  def send_mail
+    price = @total_price_of_order
+    email = params[:email]
+    OrderMailer.order_email(email, price).deliver
+    redirect_to cart_path
+  end
+
   private
 
   def total_price_of_order

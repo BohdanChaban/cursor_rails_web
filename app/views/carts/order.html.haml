@@ -1,7 +1,22 @@
 .all_file
   %h1= Cart.human_attribute_name('order')
 
-  %p Total price of products in your cart:
-  = @total_price_of_order
+  .order_text
+    %p= Cart.human_attribute_name('total_price')
+  .order_price
+    = @total_price_of_order
+  .order_text
+    %p UAH
 
-  = button_to 'Cart', cart_path, method: :get, class: "btn btn-default btn-success"
+  = form_tag(send_mail_path) do
+    .form-group
+      = label_tag 'email', 'Email', class: "col-md-4 control-label"
+      .col-md-6
+        = email_field_tag 'email', nil, class: "form-control", placeholder: Cart.human_attribute_name('your_email')
+    .submit_button
+      = submit_tag Cart.human_attribute_name('confirm_order'), class: "btn btn-default btn-success"
+
+
+
+  .order_button
+    = button_to Cart.human_attribute_name('back_to_cart'), cart_path, method: :get, class: "btn btn-default btn-success"
