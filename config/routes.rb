@@ -9,9 +9,10 @@ Rails.application.routes.draw do
 
   post '/carts/add_product', to: 'carts#add', as: 'add_to_cart'
   delete '/carts/remove_product', to: 'carts#remove', as: 'remove_from_cart'
-  match 'carts/send_mail', to: 'carts#send_mail', via: 'post'
+  match '/send_mail', to: 'carts#send_mail', via: 'post'
 
   resources :accounts
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

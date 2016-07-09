@@ -20,7 +20,7 @@ class CartsController < ApplicationController
   def send_mail
     order_price = total_price_of_order
     email = params[:email]
-    OrderMailer.order_email(email, order_price).deliver
+    OrderMailer.order_email(email, order_price).deliver_later
     redirect_to products_path
     Cart.find(session[:cart_id]).products.each do |p|
       p.update(cart_id: nil)
