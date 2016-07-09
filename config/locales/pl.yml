@@ -46,6 +46,7 @@ pl:
         back_to_cart: 'Powrót do koszyka'
         total_price: 'Całkowity koszt produktów w koszyku:'
         your_email: 'Twój adres email'
+        remove_from_cart: 'Usunąć z koszyka'
     errors:
       template:
         header:

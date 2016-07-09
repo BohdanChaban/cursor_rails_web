@@ -8,6 +8,11 @@ class CartsController < ApplicationController
     Cart.find(session[:cart_id]).products << Product.find(params[:product_id])
   end
 
+  def remove
+    Cart.find(session[:cart_id]).products.find(params[:product_id]).destroy
+    redirect_to cart_path
+  end
+
   def order
     @total_price_of_order = total_price_of_order
   end
@@ -16,7 +21,7 @@ class CartsController < ApplicationController
     price = @total_price_of_order
     email = params[:email]
     OrderMailer.order_email(email, price).deliver
-    redirect_to cart_path
+    redirect_to products_path
   end
 
   private

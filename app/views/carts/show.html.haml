@@ -6,12 +6,13 @@
         %th= Cart.human_attribute_name('name')
         %th= Cart.human_attribute_name('description')
         %th= Cart.human_attribute_name('price')
-    %tbody
+        %th(colspan="1")
       - @products_in_cart.each do |product|
         %tr
           %td= product.name
           %td= product.description
           %td= product.price
+          %td= button_to Cart.human_attribute_name('remove_from_cart'), remove_from_cart_path(product_id: product.id),method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default btn-success"
   %br
   .links_inline
     = button_to Cart.human_attribute_name('products_list'), products_path, method: :get, class: 'btn btn-default btn-success'

@@ -46,6 +46,7 @@ ua:
         back_to_cart: 'Назад до кошика'
         total_price: 'Загальна вартість продуктів у Вашому кошику:'
         your_email: 'Ваша email адреса'
+        remove_from_cart: 'Видалити з кошика'
     errors:
       template:
         header:

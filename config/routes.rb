@@ -7,7 +7,8 @@ Rails.application.routes.draw do
     end
   end
 
-  post '/cart/add_product', to: 'cart#add', as: 'add_to_cart'
+  post '/carts/add_product', to: 'carts#add', as: 'add_to_cart'
+  delete '/carts/remove_product', to: 'carts#remove', as: 'remove_from_cart'
   match '/send_mail', to: 'carts#send_mail', via: 'post'
 
   resources :accounts
