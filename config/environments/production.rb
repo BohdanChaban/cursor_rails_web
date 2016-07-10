@@ -35,6 +35,8 @@ Rails.application.configure do
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
 
+  config.assets.initialize_on_precompile = false
+
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Specifies the header that your server uses for sending files.
@@ -69,6 +71,7 @@ Rails.application.configure do
       domain: 'sandbox8767be5b27634401803d19e49f902310.mailgun.org'
   }
   config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = {host: 'https://morning-caverns-29306.herokuapp.com'}
 
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to

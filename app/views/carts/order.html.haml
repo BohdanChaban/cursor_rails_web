@@ -12,7 +12,7 @@
     .form-group
       = label_tag 'email', 'Email', class: 'col-md-4 control-label'
       .col-md-6
-        = email_field_tag 'email', nil, class: 'form-control', placeholder: Cart.human_attribute_name('your_email')
+        = email_field_tag 'email', current_user.email, class: 'form-control'
     .submit_button
       = submit_tag Cart.human_attribute_name('confirm_order'), class: 'btn btn-default btn-success'
 

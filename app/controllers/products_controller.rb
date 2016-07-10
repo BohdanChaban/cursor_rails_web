@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :initialize_session, only: :index
+  before_action :authenticate_user!, except: [:index]
   before_action :find_product, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -46,10 +46,6 @@ class ProductsController < ApplicationController
 
   def product_params
     params.require(:product).permit(:name, :description, :price)
-  end
-
-  def initialize_session
-    session[:view_count] ||= 0
   end
 
   def find_product
