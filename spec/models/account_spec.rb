@@ -13,6 +13,7 @@ describe Account do
       is_less_than_or_equal_to(100)
   end
   it { should have_one(:cart) }
+  it { should belong_to(:user)}
   it { should have_many(:friends) }
   it { should have_many(:friendships) }
 end

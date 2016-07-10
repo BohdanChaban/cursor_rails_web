@@ -10,11 +10,17 @@ describe AccountsController do
   end
 
   it 'assigns @account variable' do
+    @request.env['devise.mapping'] = Devise.mappings[:user]
+    user = create(:user)
+    sign_in :user, user
     get :new
     expect(assigns[:account]).not_to be_nil
   end
 
   it 'should create new account' do
+    @request.env['devise.mapping'] = Devise.mappings[:user]
+    user = create(:user)
+    sign_in :user, user
     post :create, account: {name:'BohdanChaban', age: 25}
     expect(assigns[:account]).not_to be_nil
     expect(assigns[:account].errors.size).to eql(0)
@@ -22,6 +28,9 @@ describe AccountsController do
   end
 
   it 'should not create new account' do
+    @request.env['devise.mapping'] = Devise.mappings[:user]
+    user = create(:user)
+    sign_in :user, user
     post :create, account: {name:'B', age: -10}
     expect(assigns[:account]).not_to be_nil
     expect(assigns[:account].errors.size).to eql(2)
@@ -31,18 +40,27 @@ describe AccountsController do
   end
 
   it 'should update account' do
+    @request.env['devise.mapping'] = Devise.mappings[:user]
+    user = create(:user)
+    sign_in :user, user
     acc = create(:account)
     put :update, id: acc.id, account: {name:'Rafaello', age: 19}
     expect(response).to be_redirect
   end
 
   it 'should not update account, render edit' do
+    @request.env['devise.mapping'] = Devise.mappings[:user]
+    user = create(:user)
+    sign_in :user, user
     acc = create(:account)
     put :update, id: acc.id, account: {name:'Raf', age: 15}
     expect(response).to render_template :edit
   end
 
   it 'should delete account, redirect to accounts' do
+    @request.env['devise.mapping'] = Devise.mappings[:user]
+    user = create(:user)
+    sign_in :user, user
     acc = create(:account)
     delete :destroy, id: acc.id, account: {name:'BohdanChaban', age: 25}
     expect(response).to redirect_to accounts_path
