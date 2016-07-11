@@ -1,6 +1,6 @@
 .all_file
   - flash.each do |key, value|
-    .alert{role: "alert", class: colored_class(key)}= value
+    .alert{role: 'alert', class: colored_class(key)}= value
 
   %h1.header1= Product.human_attribute_name('products_list')
   .links.cart_pic
@@ -11,7 +11,7 @@
   %table.table.table-hover.my_table
     %thead
       %tr
-        %th(colspan="1")
+        %th= Product.human_attribute_name('image')
         %th= Product.human_attribute_name('name')
         %th= Product.human_attribute_name('description')
         %th= Product.human_attribute_name('price')

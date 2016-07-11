@@ -46,6 +46,7 @@ en:
         name: 'Name'
         description: 'Description'
         price: 'Price'
+        image: 'Image'
         empty: 'Products list is empty'
         products_list: 'Products list'
         show: 'Show'

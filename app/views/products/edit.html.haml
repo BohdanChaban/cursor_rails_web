@@ -1,19 +1,21 @@
 .all_file
   %h1.header1= Product.human_attribute_name('edit_product')
-  = form_for(@product) do |f|
-    .input_block
-      = f.label Product.human_attribute_name('name')
-      %br
-      = f.text_field :name
-    .input_block
-      = f.label Product.human_attribute_name('description')
-      %br
-      = f.text_field :description
-    .input_block
-      = f.label Product.human_attribute_name('price')
-      %br
-      = f.text_field :price
-    .input_block
-      = f.file_field :image
-    .input_block
-      = f.submit Product.human_attribute_name('update_product')
+  = form_for @product, :html => {:class => 'form-horizontal center'} do |f|
+    .form-group
+      = f.label Product.human_attribute_name('name'), class: 'col-md-4 control-label'
+      .col-md-7
+        = f.text_field :name, class: 'form-control'
+    .form-group
+      = f.label Product.human_attribute_name('description'), class: 'col-md-4 control-label'
+      .col-md-7
+        = f.text_field :description, class: 'form-control'
+    .form-group
+      = f.label Product.human_attribute_name('price'), class: 'col-md-4 control-label'
+      .col-md-7
+        = f.text_field :price, class: 'form-control'
+    .form-group
+      = f.label :image, Product.human_attribute_name('image'), class: 'col-md-4 control-label'
+      .col-md-7
+        = f.file_field :image, class: 'btn btn-default btn-success'
+    .submit_button
+      = f.submit Product.human_attribute_name('update_product'), class: 'btn btn-default btn-success'

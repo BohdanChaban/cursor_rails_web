@@ -25,6 +25,7 @@ pl:
         name: 'Nazwa'
         description: 'Opis'
         price: 'Cena'
+        image: 'Obraz'
         empty: 'Lista produktów jest pusta'
         products_list: 'Lista produktów'
         show: 'Przegląd'
