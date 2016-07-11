@@ -1,4 +1,6 @@
 .all_file
+  .product_image
+    = image_tag @product.image.url
   %p.show_text
     %strong= Product.human_attribute_name('name')
     = @product.name

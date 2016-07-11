@@ -1,21 +1,22 @@
 .input_block
-  = form_for @product, :html => {:class => "form-horizontal center"} do |f|
+  = form_for @product, :html => {:class => 'form-horizontal center', multipart: true} do |f|
     - if @product.errors.any?
       #error_explanation
         %h2
           = error_messages_for(@product)
 
     .form-group
-      = f.label :name, Product.human_attribute_name('name'), class: "col-md-4 control-label"
+      = f.label :name, Product.human_attribute_name('name'), class: 'col-md-4 control-label'
       .col-md-7
-        = f.text_field :name, class: "form-control"
+        = f.text_field :name, class: 'form-control'
     .form-group
-      = f.label :description, Product.human_attribute_name('description'), class: "col-md-4 control-label"
+      = f.label :description, Product.human_attribute_name('description'), class: 'col-md-4 control-label'
       .col-md-7
-        = f.text_field :description, class: "form-control"
+        = f.text_field :description, class: 'form-control'
     .form-group
-      = f.label :price, Product.human_attribute_name('price'), class: "col-md-4 control-label"
+      = f.label :price, Product.human_attribute_name('price'), class: 'col-md-4 control-label'
       .col-md-7
-        = f.text_field :price, class: "form-control"
+        = f.text_field :price, class: 'form-control'
+    = f.file_field :image
     .submit_button
-      = f.submit Product.human_attribute_name('create_product'), class: "btn btn-default btn-success"
+      = f.submit Product.human_attribute_name('create_product'), class: 'btn btn-default btn-success'

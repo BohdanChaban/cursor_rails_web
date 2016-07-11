@@ -14,4 +14,6 @@
       %br
       = f.text_field :price
     .input_block
+      = f.file_field :image
+    .input_block
       = f.submit Product.human_attribute_name('update_product')

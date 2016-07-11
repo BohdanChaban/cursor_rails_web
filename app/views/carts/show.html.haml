@@ -3,12 +3,14 @@
   %table.table.table-hover.my_table
     %thead
       %tr
+        %th(colspan="1")
         %th= Cart.human_attribute_name('name')
         %th= Cart.human_attribute_name('description')
         %th= Cart.human_attribute_name('price')
         %th(colspan="1")
       - @products_in_cart.each do |product|
         %tr
+          %td= image_tag product.image.url(:thumb)
           %td= product.name
           %td= product.description
           %td= product.price
