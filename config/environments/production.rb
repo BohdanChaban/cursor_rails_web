@@ -67,11 +67,16 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
   # Parameters for Mailgun service (send email)
-  config.action_mailer.delivery_method = :mailgun
-  config.action_mailer.mailgun_settings = {
-      api_key: 'key-b1d2b24508b66422df581b9ef466cc44',
-      domain: 'sandbox8767be5b27634401803d19e49f902310.mailgun.org'
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      :port           => ENV['MAILGUN_SMTP_PORT'],
+      :address        => ENV['MAILGUN_SMTP_SERVER'],
+      :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+      :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+      :domain         => 'morning-caverns-29306.herokuapp.com',
+      :authentication => :plain
   }
+
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default_url_options = {host: 'https://morning-caverns-29306.herokuapp.com'}
 
