@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: hgfvvvvuz
+  api_key: '835416622718963'
+  api_secret: jwc0sai5t6SDeBECIeGgLSLH1gQ
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: hgfvvvvuz
+  api_key: '835416622718963'
+  api_secret: jwc0sai5t6SDeBECIeGgLSLH1gQ
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: hgfvvvvuz
+  api_key: '835416622718963'
+  api_secret: jwc0sai5t6SDeBECIeGgLSLH1gQ
+  enhance_image_tag: true
+  static_image_support: false
