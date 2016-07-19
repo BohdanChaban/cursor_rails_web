@@ -7,20 +7,21 @@
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
     = csrf_meta_tags
-
   %body.body
     %header.header
       %h1 CURSOR SHOP
+      .lang_link
+        = link_to image_tag('en.png', size: '50x50'), '?locale=en'
+        = link_to image_tag('ua.png', size: '50x50'), '?locale=ua'
+        = link_to image_tag('pl.png', size: '50x50'), '?locale=pl'
       .lang_link.log_image
         - if user_signed_in?
           = link_to image_tag('out.png', size: '47x47'), destroy_user_session_path, method: :delete
         - else
           = link_to image_tag('in.png', size: '47x47'), new_user_session_path
           = link_to image_tag('google.png', size: '55x55'), user_google_oauth2_omniauth_authorize_path
-      .lang_link
-        = link_to image_tag('en.png', size: '50x50'), '?locale=en'
-        = link_to image_tag('ua.png', size: '50x50'), '?locale=ua'
-        = link_to image_tag('pl.png', size: '50x50'), '?locale=pl'
+          = link_to image_tag('fb.png', size: '55x55'), user_facebook_omniauth_authorize_path
+          = link_to image_tag('vk.png', size: '55x55'), user_vkontakte_omniauth_authorize_path
     %main.main
       = yield
     %footer.footer

@@ -39,6 +39,8 @@ gem 'devise-bootstrap-views'
 
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
+gem 'omniauth-facebook'
+gem 'omniauth-vkontakte'
 
 gem 'paperclip', '~> 5.0.0'
 
