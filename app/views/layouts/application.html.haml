@@ -16,6 +16,7 @@
           = link_to image_tag('out.png', size: '47x47'), destroy_user_session_path, method: :delete
         - else
           = link_to image_tag('in.png', size: '47x47'), new_user_session_path
+          = link_to image_tag('google.png', size: '55x55'), user_google_oauth2_omniauth_authorize_path
       .lang_link
         = link_to image_tag('en.png', size: '50x50'), '?locale=en'
         = link_to image_tag('ua.png', size: '50x50'), '?locale=ua'

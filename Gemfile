@@ -37,6 +37,9 @@ gem 'mailgun_rails'
 gem 'devise'
 gem 'devise-bootstrap-views'
 
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+
 gem 'paperclip', '~> 5.0.0'
 
 gem 'cloudinary'

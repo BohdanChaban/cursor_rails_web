@@ -2,15 +2,27 @@ class User < ActiveRecord::Base
   after_create :create_account_with_cart
 
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+  # :confirmable, :lockable, :timeoutable
   devise :database_authenticatable,
          :registerable,
          :recoverable,
          :rememberable,
          :trackable,
-         :validatable
+         :validatable,
+         :omniauthable, :omniauth_providers => [:google_oauth2]
 
   has_one :account
+
+  def self.from_omniauth(access_token)
+    data = access_token.info
+    user = User.where(email: data['email']).first
+
+    unless user
+      user = User.create(email: data['email'],
+                         password: Devise.friendly_token[0, 20])
+    end
+    user
+  end
 
   private
 
