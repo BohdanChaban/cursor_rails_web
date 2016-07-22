@@ -11,13 +11,14 @@
         %th= Account.human_attribute_name('age')
         %th{ :colspan =>'3'}
     %tbody
+      - sure_alert = I18n.t 'sure'
       - @accounts.each do |account|
         %tr
           %td= account.name
           %td= account.age
-          %td= link_to Account.human_attribute_name('show'), account
-          %td= link_to Account.human_attribute_name('edit'), edit_account_path(account)
-          %td= link_to Account.human_attribute_name('destroy'), account, method: :delete, data: { confirm: 'Are you sure?' }
+          %td= link_to Account.human_attribute_name('show'), account, class: "btn btn-default btn-success"
+          %td= link_to Account.human_attribute_name('edit'), edit_account_path(account), class: "btn btn-default btn-success"
+          %td= link_to Account.human_attribute_name('destroy'), account, method: :delete, data: { confirm: sure_alert }, class: "btn btn-default btn-success"
   %br/
   .links
-    = link_to Account.human_attribute_name('new_account'), new_account_path
+    = link_to Account.human_attribute_name('new_account'), new_account_path, class: "btn btn-default btn-success"

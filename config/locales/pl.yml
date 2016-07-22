@@ -1,8 +1,12 @@
 pl:
   hello: "Witaj świecie"
   rights: 'Wszelkie prawa zastrzeżone'
-  flash_create: 'Produkt został pomyślnie utworzony.'
-  flash_destroy: 'Produkt został pomyślnie zniszczone.'
+  account_create: 'Użytkownik pomyślnie utworzony.'
+  account_update: 'Użytkownik pomyślnie zmienione.'
+  account_destroy: 'Użytkownik pomyślnie usunięty.'
+  add_message: 'Pomyślnie dodano do koszyka!'
+  product_create: 'Produkt został pomyślnie utworzony.'
+  product_destroy: 'Produkt został pomyślnie zniszczone.'
   sure: 'Czy jesteś pewien?'
   activerecord:
     models:

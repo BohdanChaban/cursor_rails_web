@@ -17,6 +17,7 @@
         %th= Product.human_attribute_name('price')
         %th(colspan="4")
     %tbody
+      - sure_alert = I18n.t 'sure'
       - @products.each do |product|
         %tr
           %td= image_tag product.image.url(:thumb)
@@ -26,6 +27,6 @@
           %td= button_to Product.human_attribute_name('add_to_cart'), add_to_cart_path(product_id: product.id), method: :post, remote: true, class: "btn btn-default btn-success"
           %td= button_to Product.human_attribute_name('show'), product, method: :get, class: "btn btn-default btn-success"
           %td= button_to Product.human_attribute_name('edit'), edit_product_path(product), method: :get, class: "btn btn-default btn-success"
-          %td= button_to Product.human_attribute_name('destroy'), product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default btn-success"
+          %td= button_to Product.human_attribute_name('destroy'), product, method: :delete, data: { confirm: sure_alert }, class: "btn btn-default btn-success"
   .links
     = button_to Product.human_attribute_name('create_product'), new_product_path, method: :get, class: "btn btn-default btn-success"

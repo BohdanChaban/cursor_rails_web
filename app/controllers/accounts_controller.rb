@@ -30,7 +30,8 @@ class AccountsController < ApplicationController
     respond_to do |format|
       if @account.save
         AccountMailer.welcome_email(@account).deliver_later
-        format.html { redirect_to @account, notice: 'Account was successfully created.' }
+        account_create = I18n.t 'account_create'
+        format.html { redirect_to @account, notice: account_create }
         format.json { render :show, status: :created, location: @account }
       else
         format.html { render :new }
@@ -44,7 +45,8 @@ class AccountsController < ApplicationController
   def update
     respond_to do |format|
       if @account.update(account_params)
-        format.html { redirect_to @account, notice: 'Account was successfully updated.' }
+        account_update = I18n.t 'account_update'
+        format.html { redirect_to @account, notice: account_update }
         format.json { render :show, status: :ok, location: @account }
       else
         format.html { render :edit }
@@ -57,8 +59,9 @@ class AccountsController < ApplicationController
   # DELETE /accounts/1.json
   def destroy
     @account.destroy
+    account_destroy = I18n.t 'account_destroy'
     respond_to do |format|
-      format.html { redirect_to accounts_url, notice: 'Account was successfully destroyed.' }
+      format.html { redirect_to accounts_url, notice: account_destroy }
       format.json { head :no_content }
     end
   end

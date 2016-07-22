@@ -1,8 +1,12 @@
 ua:
   hello: "Привіт, світе"
   rights: 'Всі права захищені'
-  flash_create: 'Продукт успішно створений'
-  flash_destroy: 'Продукт успішно видалений'
+  account_create: 'Користувач успішно створений.'
+  account_update: 'Користувач успішно змінений.'
+  account_destroy: 'Користувач успішно видалений.'
+  add_message: 'Успішно додано до корзини!'
+  product_create: 'Продукт успішно створений.'
+  product_destroy: 'Продукт успішно видалений.'
   sure: 'Ви впевнені?'
   activerecord:
     models:
