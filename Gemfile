@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
-#gem 'sqlite3'
+# gem 'sqlite3'
 gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -66,14 +65,23 @@ group :test do
   gem 'shoulda-matchers'
   gem 'faker'
   gem 'factory_girl_rails'
-  gem 'simplecov', :require => false
+  gem 'simplecov', require: false
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # Spring speeds up development by keeping your application running in the background.
+  # Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Brakeman is an open source static analysis tool which checks
+  # Ruby on Rails applications for security vulnerabilities.
+  gem 'brakeman', require: false
+
+  gem 'rails_best_practices'
+
+  gem 'rubocop', '~> 0.41.2', require: false
 end
 

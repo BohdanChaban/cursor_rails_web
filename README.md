@@ -18,10 +18,16 @@ Used technologies, frameworks and gems:
         - Bootstrap
         - HAML
         - Rspec
+        - Factory Girl
         - Travis CI
         - Coveralls
         - Devise
         - Mailgun
+        - Paperclip
+        - OmniAuth Google+
+        - Brakeman
+        - Rubocop
+        - Rails Best Practices
         - ...
 
 Application on Heroku:

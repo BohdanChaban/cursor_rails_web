@@ -1,0 +1,15 @@
+Style/FrozenStringLiteralComment:
+  Enabled: false
+TrailingBlankLines:
+  Enabled: false
+Documentation:
+  Enabled: false
+Metrics/LineLength:
+  Max: 99
+AllCops:
+  Exclude:
+    - command_order.rb
+    - examples.rb
+    - db/*
+    - db/migrate/*
+    - bin/*

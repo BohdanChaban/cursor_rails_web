@@ -14,7 +14,18 @@
         null,
         null,
         null,
+        null,
         1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        null,
         null,
         1,
         null,
@@ -28,17 +39,9 @@
         15,
         15,
         null,
-        null
-      ],
-      "/home/bohdan/cursor/cursor_rails1/app/helpers/accounts_helper.rb": [
-        1,
         null
       ],
       "/home/bohdan/cursor/cursor_rails1/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/home/bohdan/cursor/cursor_rails1/app/helpers/carts_helper.rb": [
         1,
         null
       ],
@@ -87,6 +90,7 @@
         2,
         2,
         1,
+        1,
         2,
         1,
         null,
@@ -101,6 +105,7 @@
         1,
         2,
         2,
+        1,
         2,
         1,
         null,
@@ -112,6 +117,7 @@
         null,
         null,
         null,
+        1,
         1,
         1,
         1,
@@ -273,6 +279,7 @@
         1,
         1,
         1,
+        1,
         null,
         null,
         null
@@ -332,9 +339,27 @@
         null,
         1,
         1,
+        null,
+        1,
+        1,
         null
+      ],
+      "/home/bohdan/cursor/cursor_rails1/app/controllers/users/omniauth_callbacks_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
-    "timestamp": 1468163703
+    "timestamp": 1469217400
   }
 }

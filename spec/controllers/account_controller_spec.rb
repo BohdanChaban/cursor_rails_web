@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe AccountsController do
-
   it 'assigns @accounts variable' do
     acc = create(:account)
     get :index
@@ -21,7 +20,7 @@ describe AccountsController do
     @request.env['devise.mapping'] = Devise.mappings[:user]
     user = create(:user)
     sign_in :user, user
-    post :create, account: {name:'BohdanChaban', age: 25}
+    post :create, account: { name: 'BohdanChaban', age: 25 }
     expect(assigns[:account]).not_to be_nil
     expect(assigns[:account].errors.size).to eql(0)
     expect(Account.where(name: 'BohdanChaban').first).not_to be_nil
@@ -31,7 +30,7 @@ describe AccountsController do
     @request.env['devise.mapping'] = Devise.mappings[:user]
     user = create(:user)
     sign_in :user, user
-    post :create, account: {name:'B', age: -10}
+    post :create, account: { name: 'B', age: -10 }
     expect(assigns[:account]).not_to be_nil
     expect(assigns[:account].errors.size).to eql(2)
     expect(assigns[:account].errors.messages[:name]).not_to be_nil
@@ -44,7 +43,7 @@ describe AccountsController do
     user = create(:user)
     sign_in :user, user
     acc = create(:account)
-    put :update, id: acc.id, account: {name:'Rafaello', age: 19}
+    put :update, id: acc.id, account: { name: 'Rafaello', age: 19 }
     expect(response).to be_redirect
   end
 
@@ -53,7 +52,7 @@ describe AccountsController do
     user = create(:user)
     sign_in :user, user
     acc = create(:account)
-    put :update, id: acc.id, account: {name:'Raf', age: 15}
+    put :update, id: acc.id, account: { name: 'Raf', age: 15 }
     expect(response).to render_template :edit
   end
 
@@ -62,7 +61,7 @@ describe AccountsController do
     user = create(:user)
     sign_in :user, user
     acc = create(:account)
-    delete :destroy, id: acc.id, account: {name:'BohdanChaban', age: 25}
+    delete :destroy, id: acc.id, account: { name: 'BohdanChaban', age: 25 }
     expect(response).to redirect_to accounts_path
   end
 end

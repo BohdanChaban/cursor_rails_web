@@ -7,7 +7,9 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
+  # rubocop:disable LineLength
   # config.secret_key = '8672a13dae1633b17d83e27529b0443b7e3c60ded2c1d1e32e3335e6efc79c1463e21d28b7827f690c7ccb28a369485f3f0e570c04053799473be305683be412'
+  # rubocop:enable LineLength
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -109,7 +111,9 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
+  # rubocop:disable LineLength
   # config.pepper = '637891a65a5010a2cf840209a6710240a1e782fd91665bd5be07c50d12ce8c63d1e7769dfd0ae35c52d89898082e90c24b0a93a47aa5c6fd5d293a5788969f2c'
+  # rubocop:enable LineLength
 
   # Send a notification email when the user's password is changed
   # config.send_password_change_notification = false
@@ -249,8 +253,10 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  require "omniauth-google-oauth2"
+  require 'omniauth-google-oauth2'
+  # rubocop:disable LineLength
   config.omniauth :google_oauth2, '463715428666-4gv2t3s9d7r23j6223c18mit959qc48u.apps.googleusercontent.com', 'M9I0UyYVWLhpQgwczHgrOqMj', {}
+  # rubocop:enable LineLength
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

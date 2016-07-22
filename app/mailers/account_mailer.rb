@@ -6,5 +6,4 @@ class AccountMailer < ApplicationMailer
     @url = 'https://morning-caverns-29306.herokuapp.com'
     mail(to: @user.name, subject: 'Welcome to our site!')
   end
-
 end

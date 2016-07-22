@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe CartsController do
-
   it do
     @request.env['devise.mapping'] = Devise.mappings[:user]
     user = create(:user)
@@ -18,7 +17,7 @@ describe CartsController do
     post :send_mail, email: email
   end
 
-  it 'should show order'do
+  it 'should show order' do
     @request.env['devise.mapping'] = Devise.mappings[:user]
     user = create(:user)
     sign_in :user, user

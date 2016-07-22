@@ -1,9 +1,9 @@
 class Friendship < ActiveRecord::Base
   belongs_to :account
-  belongs_to :friend, :class_name => "Account"
+  belongs_to :friend, class_name: 'Account'
 
-  after_create :create_inverse, unless: :has_inverse?
-  after_destroy :destroy_inverses, if: :has_inverse?
+  after_create :create_inverse, unless: :inverse?
+  after_destroy :destroy_inverses, if: :inverse?
 
   def create_inverse
     self.class.create(inverse_friend_options)
@@ -13,7 +13,7 @@ class Friendship < ActiveRecord::Base
     inverses.destroy_all
   end
 
-  def has_inverse?
+  def inverse?
     self.class.exists?(inverse_friend_options)
   end
 

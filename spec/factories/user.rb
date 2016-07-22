@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :user do
-    email { Faker::Internet.email}
+    email { Faker::Internet.email }
     password 'password'
     password_confirmation 'password'
-    after(:create) {:create_account_with_cart}
+    after(:create) { :create_account_with_cart }
   end
 end

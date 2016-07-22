@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, :controllers => { :omniauth_callbacks => 'users/omniauth_callbacks'}
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
   resources :accounts
 
@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resource :cart, only: :show do
     collection do
-          get 'order'
+      get 'order'
     end
   end
   post '/carts/add_product', to: 'carts#add', as: 'add_to_cart'

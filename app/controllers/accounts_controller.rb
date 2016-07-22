@@ -26,16 +26,13 @@ class AccountsController < ApplicationController
   # POST /accounts.json
   def create
     @account = Account.new(account_params)
-
     respond_to do |format|
       if @account.save
         AccountMailer.welcome_email(@account).deliver_later
         account_create = I18n.t 'account_create'
         format.html { redirect_to @account, notice: account_create }
-        format.json { render :show, status: :created, location: @account }
       else
         format.html { render :new }
-        format.json { render json: @account.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -67,13 +64,15 @@ class AccountsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_account
-      @account = Account.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def account_params
-      params.require(:account).permit(:name, :age)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_account
+    @account = Account.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet,
+  # only allow the white list through.
+  def account_params
+    params.require(:account).permit(:name, :age)
+  end
 end
