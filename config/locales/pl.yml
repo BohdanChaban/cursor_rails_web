@@ -79,6 +79,61 @@ pl:
               not_a_number: 'musi być liczbą'
               greater_than: 'musi być większa %{count}'
   devise:
+    confirmations:
+      confirmed: "Twój adres e-mail został pomyślnie zweryfikowany."
+      send_instructions: "Otrzymasz e-mail z instrukcjami, jak potwierdzić swój adres e-mail w ciągu kilku minut."
+      send_paranoid_instructions: "Jeśli Twój adres e-mail istnieje w naszej bazie danych, otrzymasz wiadomość e-mail z instrukcjami, jak potwierdzić swój adres e-mail w ciągu kilku minut."
+    failure:
+      already_authenticated: "Jesteś zalogowany."
+      inactive: "Twoje konto nie zostało aktywowane indziej."
+      invalid: "Nieprawidłowy %{authentication_keys} lub hasło."
+      locked: "Twoje konto jest zablokowane."
+      last_attempt: "Masz jeszcze jedną próbę, zanim konto zostanie zablokowane"
+      not_found_in_database: "Nieprawidłowy %{authentication_keys} lub hasło."
+      timeout: "Sesja została zakończona. Proszę zalogować się ponownie, aby kontynuować."
+      unauthenticated: "Musisz się zalogować lub zarejestrować przed kontynuowaniem."
+      unconfirmed: "Musisz potwierdzić swój adres e-mail przed kontynuowaniem."
+    mailer:
+      confirmation_instructions:
+        subject: "Instrukcji potwierdzania"
+      reset_password_instructions:
+        subject: "Instrukcje resetowania hasła"
+      unlock_instructions:
+        subject: "Odblokuj instrukcje"
+      password_change:
+        subject: "Zmiana hasła"
+    passwords:
+      no_token: "Nie można uzyskać dostępu ta strona nie pochodzi z e-mail resetowania hasła. Jeśli pochodzą z wiadomości e-mail, aby zresetować hasło, upewnij się użyć pełny adres URL."
+      send_instructions: "Otrzymasz e-mail z instrukcjami, jak zresetować hasło w ciągu kilku minut."
+      send_paranoid_instructions: "Jeśli Twój adres e-mail istnieje w naszej bazie danych, otrzymasz link do zresetowania hasła do swojego adresu e-mail w ciągu kilku minut."
+      updated: "Twoje hasło zostało zmienione. Jesteś zalogowany."
+      updated_not_active: "Twoje hasło zostało zmienione."
+    registrations:
+      destroyed: "Do widzenia! Twoje konto zostało pomyślnie anulowane. Mamy nadzieję, że do zobaczenia wkrótce."
+      signed_up: "Witamy! Pomyślnie zarejestrowany."
+      signed_up_but_inactive: "Pomyślnie zarejestrowany. Jednak nie mogliśmy podpisać, że Twoje konto nie zostało aktywowane."
+      signed_up_but_locked: "Pomyślnie zarejestrowany. Jednak nie mogliśmy podpisać, że twoje konto zostało zablokowane."
+      signed_up_but_unconfirmed: "Wiadomość z linkiem weryfikacyjnym wysłana na Twój adres e-mail. Proszę kliknąć na link do aktywacji konta."
+      update_needs_confirmation: "Zmieniłeś swoje konto pomyślnie, ale musimy zweryfikować swój nowy adres e-mail. Proszę sprawdzić pocztę i kliknij link, aby zweryfikować swój nowy adres e-mail."
+      updated: "Zmieniłeś swoje konto pomyślnie."
+    sessions:
+      signed_in: "Zaloguj się sukcesem."
+      signed_out: "Wyjdź udany."
+      already_signed_out: "Wyjdź udany."
+    unlocks:
+      send_instructions: "Otrzymasz e-mail z instrukcjami, jak odblokować swoje konto w ciągu kilku minut."
+      send_paranoid_instructions: "Jeśli konto nie istnieje, otrzymasz e-mail z instrukcjami, jak je odblokować w ciągu kilku minut."
+      unlocked: "Twoje konto zostało zablokowane. Proszę się zalogować, aby kontynuować."
+    errors:
+      messages:
+        already_confirmed: "już potwierdzony, spróbuj zalogować się"
+        confirmation_period_expired: "muszą zostać potwierdzone przez %{period}, prosimy o nowy"
+        expired: "zakończona, należy zwrócić się ponownie"
+        not_found: "nie znaleziono"
+        not_locked: "została odblokowana"
+        not_saved:
+          one: "1 błąd uniemożliwia to %{resource} być zapisane:"
+          other: "%{count} błąd uniemożliwia to %{resource} być zapisane:"
     omniauth_callbacks:
-      failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
-      success: "Successfully authenticated from %{kind} account."
+      failure: "Nie udało się uwierzytelnić cię z %{kind} bo \"%{reason}\"."
+      success: "Pomyślnym uwierzytelnieniu z %{kind}."
