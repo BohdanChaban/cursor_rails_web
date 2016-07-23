@@ -3,5 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .all_file {
-  min-height: 400px;
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+  //min-height: 400px;
 }

@@ -78,3 +78,7 @@ ua:
             price:
               not_a_number: 'має бути числом'
               greater_than: 'має бути більшою за %{count}'
+  devise:
+    omniauth_callbacks:
+      failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
+      success: "Successfully authenticated from %{kind} account."

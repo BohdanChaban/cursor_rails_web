@@ -78,3 +78,7 @@ pl:
             price:
               not_a_number: 'musi być liczbą'
               greater_than: 'musi być większa %{count}'
+  devise:
+    omniauth_callbacks:
+      failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
+      success: "Successfully authenticated from %{kind} account."
